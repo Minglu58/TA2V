@@ -40,8 +40,7 @@ URMP-VAT (Landscape-VAT)
 | Landscape-VAT | [epoch]() | [epoch]() | [model.pt]()
 
 ## Sampling Procedure
-You can sample the short music performance videos using following command.
-
+### Sample Short Music Performance Videos
 - `gpt_text_ckpt`: path to GPT checkpoint
 - `vqgan_ckpt`: path to video VQGAN checkpoint
 - `data_path`: path to dataset, you can change it to `post_landscape` for Landscape-VAT dataset
@@ -52,7 +51,6 @@ You can sample the short music performance videos using following command.
 - `n_sample`: the number of videos need to be sampled
 - `run`: index for each run
 - `resolution`: resolution used in training video VQGAN procedure
-
 - `model_output_size`: the resolution when training the diffusion model
 - `audio_guidance_lambda`: coefficient to control audio guidance
 - `direction_lambda`: coefficient to control semantic change consistency of audio and video
@@ -66,7 +64,7 @@ python scripts/sample_tav.py --gpt_text_ckpt saved_ckpts/best_checkpoint-val_tex
 --iterations_num 1 --audio_guidance_lambda 10000 --direction_lambda 5000 --text_guidance_lambda 10000 \
 --diffusion_ckpt saved_ckpts/model300000.pt
 ```
-To compute the evaluation metrics, run
+### Calculate Evaluation Metrics
 - `exp_tag`: name of result folder, which in under `results` folder
 - `audio_folder`: folder name including audio, default: `audio`
 - `video_folder`: folder name including generated videos, choices: `fake_stage1`, `fake_stage2`, `real`
@@ -94,10 +92,45 @@ python tools/tf_fvd/fid.py --exp_tag 1_tav_URMP --real_folder real --fake_folder
 ## Training Procedure
 You can also train the models on customized datasets. Here we provide the command to train VQGAN, Transformer and Diffusion models.
 ### video VQGAN
-
+- `embedding_dim`: dimension of codebook embeddings, default: `256`
+- `n_codes`: size of codebook, default: `16384`
+- `n_hiddens`: hidden channels base, default: `32`
+- `downsample`: ratio of downsampling, default: `4 8 8`, `4` for temporal dimension and `8 8` for spatial dimension
+- `lr`: learning rate
+- `data_path`: path to dataset
+- `default_root_dir`: path to save checkpoints
+- `resolution`: video resolution to train, we set `96` for URMP-VAT, `64` for Landscape-VAT
+- `sequence_length`: length of videos, default: `16`
+```
+python scripts/train_vqgan.py --embedding_dim 256 --n_codes 16384 --n_hiddens 32 --downsample 4 8 8 --no_random_restart \
+--gpus 1 --batch_size 8 --num_workers 16 --accumulate_grad_batches 6 --progress_bar_refresh_rate 100 --max_steps 100000 \
+--gradient_clip_val 1.0 --lr 6.0e-5 --data_path datasets/post_URMP/ --default_root_dir path/to/save \
+--resolution 9 --sequence_length 16 --discriminator_iter_start 10000 --norm_type batch --perceptual_weight 4 \
+--image_gan_weight 1 --video_gan_weight 1  --gan_feat_weight 4
+```
 ### Transformer
-
+- `first_stage_key`:
+- `cond1_stage_key`:
+- `vqvae`:
+- `n_layer`:
+- `n_head`:
+- `n_embd`:
+- `text_seq_len`:
+- `embd_pdrop`:
+- `resid_pdrop`:
+- `attn_pdrop`:
+```
+python scripts/train_text_transformer.py --num_workers 4 --val_check_interval 0.5 --progress_bar_refresh_rate 100 \
+--gpus 1 --sync_batchnorm --batch_size 8 --first_stage_key video --cond1_stage_key text --text_stft_cond --text_emb_model bert \
+--vqvae path/to/video/vqgan --data_path datasets/post_URMP/ --load_vid_len 30 --default_root_dir path/to/save \
+--base_lr 4.5e-05 --first_stage_vocab_size 16384 --block_size 1024 --n_layer 12 --n_head 8 --n_embd 512 --resolution 96 \
+--sequence_length 16 --text_seq_len 12 --max_steps 500000 --embd_pdrop 0.2 --resid_pdrop 0.2 --attn_pdrop 0.2
+```
 ### Diffusion
-
+```
+python scripts/diffusion_image_train.py --num_workers 8 --gpus 1 --batch_size 1 --text_stft_cond --data_path datasets/post_URMP/ \
+--load_vid_len 30 --save_dir path/to/save --resolution 128 --sequence_length 16 --diffusion_steps 4000 --noise_schedule cosine \
+--lr 5e-5 --num_channels 128 --num_res_blocks 3 --class_cond False  --log_interval 50 --save_interval 5000 --image_size 128 --learn_sigma True
+```
 ## Acknowledgements
 Our code is based on [TATS](https://github.com/songweige/TATS) and [blended-diffusion](https://github.com/omriav/blended-diffusion).
