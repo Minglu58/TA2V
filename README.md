@@ -4,6 +4,11 @@ This is the official implement of our proposed TgVG-TAgVM model of TA2V task. Si
 <img width="800" alt="our TgVG-TAgVM model" src="https://github.com/Minglu58/TA2V/assets/95404453/12ff6304-c7cd-4eda-a3bb-a07949a0a859">
 
 ## Examples
+### Music Performance Videos
+
+### Landscape Videos
+
+### Failure
 
 ## Setup
 1. Create the virtual environment
