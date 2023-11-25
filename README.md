@@ -75,7 +75,7 @@ python tools/clip_score/clip_audio.py --exp_tag 1_tav_URMP --audio_folder audio 
 ```
 * **CLIP text score**
 ```
-python TAV/tools/clip_score/clip_text.py --exp_tag 1_tav_URMP --txt_folder txt --video_folder fake_stage2 --batch_size 5
+python tools/clip_score/clip_text.py --exp_tag 1_tav_URMP --txt_folder txt --video_folder fake_stage2 --batch_size 5
 ```
 
 - `real_folder`: folder name including ground-truth videos, default: `real`
@@ -135,7 +135,7 @@ python scripts/train_text_transformer.py --num_workers 4 --val_check_interval 0.
 - `class_cond`: whether using class or not
 - `image_size`: resolution of videos/images
 ```
-python scripts/diffusion_image_train.py --num_workers 8 --gpus 1 --batch_size 1 --text_stft_cond --data_path datasets/post_URMP/ \
+python scripts/diffusion_video_train_3d.py --num_workers 8 --gpus 1 --batch_size 1 --text_stft_cond --data_path datasets/post_URMP/ \
 --load_vid_len 30 --save_dir path/to/save --resolution 128 --sequence_length 16 --diffusion_steps 4000 --noise_schedule cosine \
 --lr 5e-5 --num_channels 128 --num_res_blocks 3 --class_cond False  --log_interval 50 --save_interval 5000 --image_size 128 --learn_sigma True
 ```
