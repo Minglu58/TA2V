@@ -29,7 +29,10 @@ URMP-VAT (Landscape-VAT)
     |---audio
 ```
 ## Download pre-trained checkpoints
-
+| Dataset | VQGAN | GPT |  Diffusion |
+| --------------- | --------------- | --------------- | --------------- |
+| URMP-VAT | [epoch]() | [epoch]() | [model.pt]()
+| Landscape-VAT | [epoch]() | [epoch]() | [model.pt]()
 
 ## Sampling Procedure
 
