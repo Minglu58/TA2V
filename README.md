@@ -109,16 +109,16 @@ python scripts/train_vqgan.py --embedding_dim 256 --n_codes 16384 --n_hiddens 32
 --image_gan_weight 1 --video_gan_weight 1  --gan_feat_weight 4
 ```
 ### Transformer
-- `first_stage_key`:
-- `cond1_stage_key`:
-- `vqvae`:
-- `n_layer`:
-- `n_head`:
-- `n_embd`:
-- `text_seq_len`:
-- `embd_pdrop`:
-- `resid_pdrop`:
-- `attn_pdrop`:
+- `first_stage_key`: load first stage data from a batch, default: `video`
+- `cond1_stage_key`: load condition stage data from a batch, default: `text`
+- `vqvae`: path to load pretrained VQGAN checkpoints
+- `n_layer`: the number of layers in transformer
+- `n_head`: the number of heads in transformer
+- `n_embd`: dimension of embeddings in transformer
+- `text_seq_len`: maximum length of text tokens
+- `embd_pdrop`: dropout ratio in embedding step
+- `resid_pdrop`: dropout ratio in transformer blocks
+- `attn_pdrop`: dropout ratio in attention blocks
 ```
 python scripts/train_text_transformer.py --num_workers 4 --val_check_interval 0.5 --progress_bar_refresh_rate 100 \
 --gpus 1 --sync_batchnorm --batch_size 8 --first_stage_key video --cond1_stage_key text --text_stft_cond --text_emb_model bert \
@@ -127,10 +127,18 @@ python scripts/train_text_transformer.py --num_workers 4 --val_check_interval 0.
 --sequence_length 16 --text_seq_len 12 --max_steps 500000 --embd_pdrop 0.2 --resid_pdrop 0.2 --attn_pdrop 0.2
 ```
 ### Diffusion
+- `save_dir`: path to save checkpoints
+- `diffusion_steps`: the number of steps to denoise
+- `noise_schedule`: choices: `cosine`, `linear`
+- `num_channels`: latent channels base
+- `num_res_blocks`: the number of resnet blocks in diffusion
+- `class_cond`: whether using class or not
+- `image_size`: resolution of videos/images
 ```
 python scripts/diffusion_image_train.py --num_workers 8 --gpus 1 --batch_size 1 --text_stft_cond --data_path datasets/post_URMP/ \
 --load_vid_len 30 --save_dir path/to/save --resolution 128 --sequence_length 16 --diffusion_steps 4000 --noise_schedule cosine \
 --lr 5e-5 --num_channels 128 --num_res_blocks 3 --class_cond False  --log_interval 50 --save_interval 5000 --image_size 128 --learn_sigma True
 ```
+We use 3D diffusion here, setting dims=3 in U-Net for convenience.
 ## Acknowledgements
 Our code is based on [TATS](https://github.com/songweige/TATS) and [blended-diffusion](https://github.com/omriav/blended-diffusion).
