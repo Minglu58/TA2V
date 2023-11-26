@@ -70,10 +70,10 @@ python scripts/sample_tav.py --gpt_text_ckpt saved_ckpts/best_checkpoint-val_tex
 --diffusion_ckpt saved_ckpts/model300000.pt
 ```
 ### Calculate Evaluation Metrics
-- `exp_tag`: name of result folder, which in under `results` folder
-- `audio_folder`: folder name including audio, default: `audio`
-- `video_folder`: folder name including generated videos, choices: `fake_stage1`, `fake_stage2`, `real`
-- `txt_folder`: foder name including text prompts, default: `txt`
+- `exp_tag`: name of result folder, which is under `results` folder
+- `audio_folder`: audio folder name, default: `audio`
+- `video_folder`: video folder name, choices: `fake_stage1`, `fake_stage2`, `real`
+- `txt_folder`: text folder name, default: `txt`
 * **CLIP audio score**
 ```
 python tools/clip_score/clip_audio.py --exp_tag 1_tav_URMP --audio_folder audio --video_folder fake_stage2 --audio_emb_model audioclip
@@ -83,8 +83,8 @@ python tools/clip_score/clip_audio.py --exp_tag 1_tav_URMP --audio_folder audio 
 python tools/clip_score/clip_text.py --exp_tag 1_tav_URMP --txt_folder txt --video_folder fake_stage2 --batch_size 5
 ```
 
-- `real_folder`: folder name including ground-truth videos, default: `real`
-- `fake_folder`: folder name including generated videos, choices: `fake_stage1`, `fake_stage2`
+- `real_folder`: ground-truth video folder name, default: `real`
+- `fake_folder`: generated video folder name, choices: `fake_stage1`, `fake_stage2`
 - `mode`: mode to calculate FVD, FID scores, choices: `full`, `size`
 * **FVD**
 ```
