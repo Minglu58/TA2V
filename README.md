@@ -41,7 +41,7 @@ URMP-VAT (Landscape-VAT)
 ## Download pre-trained checkpoints
 | Dataset | VQGAN | GPT |  Diffusion |
 | --------------- | --------------- | --------------- | --------------- |
-| URMP-VAT | [epoch]() | [epoch]() | [model.pt]()
+| URMP-VAT | [epoch]() | [epoch]() | [URMP-VAT_diffusion.pt](https://drive.google.com/file/d/1wmfWX0sF-1TTUxGN5X5088eNXCB3naz1/view?usp=drive_link)
 | Landscape-VAT | [epoch]() | [epoch]() | [model.pt]()
 
 Since we utilize [AudioCLIP](https://github.com/AndreyGuzhov/AudioCLIP) model to encode audio and images, you can download the checkpoints in their open project page.
