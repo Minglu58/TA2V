@@ -44,7 +44,7 @@ URMP-VAT (Landscape-VAT)
 | URMP-VAT | [epoch]() | [epoch]() | [model.pt]()
 | Landscape-VAT | [epoch]() | [epoch]() | [model.pt]()
 
-Since we utilize [AudioCLIP](https://github.com/AndreyGuzhov/AudioCLIP) model to encode audio and images, you can download the checkpoints in their open project.
+Since we utilize [AudioCLIP](https://github.com/AndreyGuzhov/AudioCLIP) model to encode audio and images, you can download the checkpoints in their open project page.
 
 ## Sampling Procedure
 ### Sample Short Music Performance Videos
