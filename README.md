@@ -41,8 +41,8 @@ URMP-VAT (Landscape-VAT)
 ## Download pre-trained checkpoints
 | Dataset | VQGAN | GPT |  Diffusion |
 | --------------- | --------------- | --------------- | --------------- |
-| URMP-VAT | [URMP-VAT_video_VQGAN](https://drive.google.com/file/d/1y3n56QWhQLi8fqV9VG0SkpiCQ_VxTIPS/view?usp=drive_link) | [URMP-VAT_GPT](https://drive.google.com/file/d/1T1fxotvq6s1Ljdhv3-G4SUsJwpX1gIY4/view?usp=drive_link) | [URMP-VAT_diffusion.pt](https://drive.google.com/file/d/1wmfWX0sF-1TTUxGN5X5088eNXCB3naz1/view?usp=drive_link)
-| Landscape-VAT | [Landscape-VAT_video_VQGAN](https://drive.google.com/file/d/1MyLU7kRUKpRpyYxnhmpwhbjq5w9RhTyg/view?usp=drive_link) | [Landscape-VAT_GPT](https://drive.google.com/file/d/1G_OOT-2oxdGOlLvp7H0RN522SbC9PpVK/view?usp=drive_link) | [Landscape-VAT_diffusion.pt](https://drive.google.com/file/d/1Pc54qlJMeLzB8yE_8pnCiItvFlwsFmwA/view?usp=drive_link)
+| URMP-VAT | [URMP-VAT_video_VQGAN.ckpt](https://drive.google.com/file/d/1y3n56QWhQLi8fqV9VG0SkpiCQ_VxTIPS/view?usp=drive_link) | [URMP-VAT_GPT.ckpt](https://drive.google.com/file/d/1T1fxotvq6s1Ljdhv3-G4SUsJwpX1gIY4/view?usp=drive_link) | [URMP-VAT_diffusion.pt](https://drive.google.com/file/d/1wmfWX0sF-1TTUxGN5X5088eNXCB3naz1/view?usp=drive_link)
+| Landscape-VAT | [Landscape-VAT_video_VQGAN.ckpt](https://drive.google.com/file/d/1MyLU7kRUKpRpyYxnhmpwhbjq5w9RhTyg/view?usp=drive_link) | [Landscape-VAT_GPT.ckpt](https://drive.google.com/file/d/1G_OOT-2oxdGOlLvp7H0RN522SbC9PpVK/view?usp=drive_link) | [Landscape-VAT_diffusion.pt](https://drive.google.com/file/d/1Pc54qlJMeLzB8yE_8pnCiItvFlwsFmwA/view?usp=drive_link)
 
 Since we utilize [AudioCLIP](https://github.com/AndreyGuzhov/AudioCLIP) model to encode audio and images, you can download the checkpoints in their open project page.
 
