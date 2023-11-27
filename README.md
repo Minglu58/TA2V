@@ -19,10 +19,10 @@ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit
 pip install pytorch-lightning==1.5.4 einops ftfy h5py imageio regex scikit-image scikit-video tqdm lpips blobfile mpi4py opencv-python-headless kornia termcolor pytorch-ignite visdom piq joblib av==10.0.0 matplotlib ffmpeg==4.2.2 pillow==9.5.0
 pip install git+https://github.com/openai/CLIP.git wav2clip transformers
 ```
-2. Create a `saved_ckpts` folder to download pretrained checkpoints [Here]().
+2. Create a `saved_ckpts` folder to download pretrained checkpoints.
 
 ## Datasets
-We create two three-modality datasets named as [URMP-VAT]() and [Landscape-VAT](), where there are four folders (mp4, stft_pickle, audio, txt) in each training dataset or testing dataset.
+We create two three-modality datasets named as [URMP-VAT]() and [Landscape-VAT](https://drive.google.com/file/d/1dzUa702fN8KaIv71ctuJM0t5sjTLvjjX/view?usp=drive_link), where there are four folders (mp4, stft_pickle, audio, txt) in each training dataset or testing dataset.
 
 You can download these processed datasets to `datasets` folder.
 ```
