@@ -6,12 +6,21 @@ This is the official implement of our proposed TgVG-TAgVM model of TA2V task. Si
 ## Examples
 ### Music Performance Videos
 
-### Landscape Videos
-
-### Failure
 ![generation_stage2_5_db_39_Jerusalem_26_28](https://github.com/Minglu58/TA2V/assets/95404453/4fa0bf08-1ef4-4011-b8e1-5e519fd811d7)
 ![1_vn_44_K515_15_5](https://github.com/Minglu58/TA2V/assets/95404453/f2d520e8-c544-4a4b-bb18-3313a689d280)
 ![2_tpt_42_Arioso_79_12](https://github.com/Minglu58/TA2V/assets/95404453/32fd7a40-9c4d-4329-9b20-7946c116b298)
+![1_fl_40_Miserere_13_47](https://github.com/Minglu58/TA2V/assets/95404453/9893d660-7656-4440-9528-679f80b3d468)
+
+### Landscape Videos
+![fire_crackling_136_6_34](https://github.com/Minglu58/TA2V/assets/95404453/36dadd13-f736-41da-a7c0-c936e45d8ec6)
+![fire_crackling_141_2_1](https://github.com/Minglu58/TA2V/assets/95404453/1420c2d8-269a-4f78-b11a-c3bdfd00558a)
+![splashing_water_143_6_17](https://github.com/Minglu58/TA2V/assets/95404453/767bdc3f-a86a-4ded-976e-7caecfaf6259)
+![squishing_water_136_8_38](https://github.com/Minglu58/TA2V/assets/95404453/281cf914-709f-4d58-85db-56c6f8f49918)
+
+
+### Failure
+![underwater_bubbling_119_7_21](https://github.com/Minglu58/TA2V/assets/95404453/8b199e48-4fd4-4df5-aff3-815f56366bdb)
+![raining_145_3_37](https://github.com/Minglu58/TA2V/assets/95404453/319a139d-3be3-4de7-b634-e2c065b06f53)
 
 
 ## Setup
