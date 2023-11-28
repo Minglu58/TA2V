@@ -9,6 +9,8 @@ This is the official implement of our proposed TgVG-TAgVM model of TA2V task. Si
 ### Landscape Videos
 
 ### Failure
+![generation_stage2_5_db_39_Jerusalem_26_28](https://github.com/Minglu58/TA2V/assets/95404453/4fa0bf08-1ef4-4011-b8e1-5e519fd811d7)
+
 
 ## Setup
 1. Create the virtual environment
