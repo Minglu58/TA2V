@@ -1,7 +1,7 @@
 # TA2V: Text-Audio Guided Video Generation
 This is the official implement of our proposed Text&Audio-guided Video Maker (TAgVM) model of TA2V task. Since we pay more attention to music performance video generation, given both the text prompt and the audio signals as input, the model is able to synthesize motion or gesture of the players moving with corresponding melody and rhythm.
 
-<img width="800" alt="our TgVG-TAgVM model" src="https://github.com/Minglu58/TA2V/assets/95404453/12ff6304-c7cd-4eda-a3bb-a07949a0a859">
+<img width="1150" alt="our TAgVM model" src="https://github.com/Minglu58/TA2V/assets/95404453/c10591cf-50f7-4b8d-ae3e-67fb7073b9d8">
 
 ## Examples
 ### Music Performance Videos
@@ -162,3 +162,17 @@ python scripts/diffusion_video_train_3d.py --num_workers 8 --gpus 1 --batch_size
 We use 3D diffusion here, setting dims=3 in U-Net for convenience.
 ## Acknowledgements
 Our code is based on [TATS](https://github.com/songweige/TATS) and [blended-diffusion](https://github.com/omriav/blended-diffusion).
+
+## Citation
+```
+@ARTICLE{10420468,
+  author={Zhao, Minglu and Wang, Wenmin and Chen, Tongbao and Zhang, Rui and Li, Ruochen},
+  journal={IEEE Transactions on Multimedia}, 
+  title={TA2V: Text-Audio Guided Video Generation}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-15},
+  keywords={Task analysis;Semantics;Three-dimensional displays;Generators;Generative adversarial networks;Computational modeling;Data models;Multimodal video generation;text-audio to video;VQ-GAN;diffusion;deep learning},
+  doi={10.1109/TMM.2024.3362149}}
+```
