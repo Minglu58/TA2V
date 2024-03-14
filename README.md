@@ -44,12 +44,12 @@ URMP-VAT (Landscape-VAT)
     |---mp4
     |---stft_pickle
     |---txt
-    |---audio
+    |---wav
   |---test
     |---mp4
     |---stft_pickle
     |---txt
-    |---audio
+    |---wav
 ```
 ## Download pre-trained checkpoints
 | Dataset | VQGAN | GPT |  Diffusion |
