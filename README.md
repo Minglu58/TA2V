@@ -35,7 +35,7 @@ pip install git+https://github.com/openai/CLIP.git wav2clip transformers
 2. Create a `saved_ckpts` folder to download pretrained checkpoints.
 
 ## Datasets
-We create two three-modality datasets named as [URMP-VAT]([https://drive.google.com/file/d/1dzUa702fN8KaIv71ctuJM0t5sjTLvjjX/view?usp=sharing](https://drive.google.com/file/d/1u8dA_TwivVj83DEr74Yw_bLPcOevEHb2/view?usp=sharing)) and [Landscape-VAT](https://drive.google.com/file/d/1dzUa702fN8KaIv71ctuJM0t5sjTLvjjX/view?usp=sharing), where there are four folders (mp4, stft_pickle, audio, txt) in each training dataset or testing dataset.
+We create two three-modality datasets named as [URMP-VAT](https://drive.google.com/file/d/1u8dA_TwivVj83DEr74Yw_bLPcOevEHb2/view?usp=sharing) and [Landscape-VAT](https://drive.google.com/file/d/1dzUa702fN8KaIv71ctuJM0t5sjTLvjjX/view?usp=sharing), where there are four folders (mp4, stft_pickle, audio, txt) in each training dataset or testing dataset.
 
 You can download these processed datasets to `datasets` folder.
 ```
