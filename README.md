@@ -164,6 +164,7 @@ We use 3D diffusion here, setting dims=3 in U-Net for convenience.
 Our code is based on [TATS](https://github.com/songweige/TATS) and [blended-diffusion](https://github.com/omriav/blended-diffusion).
 
 ## Citation
+If you find our work useful, please consider citing our paper.
 ```
 @ARTICLE{10420468,
   author={Zhao, Minglu and Wang, Wenmin and Chen, Tongbao and Zhang, Rui and Li, Ruochen},
