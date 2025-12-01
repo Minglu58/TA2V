@@ -166,14 +166,13 @@ Our code is based on [TATS](https://github.com/songweige/TATS) and [blended-diff
 ## Citation
 If you find our work useful, please consider citing our paper.
 ```
-@ARTICLE{10420468,
+@article{zhao2024ta2v,
+  title={Ta2v: Text-audio guided video generation},
   author={Zhao, Minglu and Wang, Wenmin and Chen, Tongbao and Zhang, Rui and Li, Ruochen},
-  journal={IEEE Transactions on Multimedia}, 
-  title={TA2V: Text-Audio Guided Video Generation}, 
+  journal={IEEE Transactions on Multimedia},
+  volume={26},
+  pages={7250--7264},
   year={2024},
-  volume={},
-  number={},
-  pages={1-15},
-  keywords={Task analysis;Semantics;Three-dimensional displays;Generators;Generative adversarial networks;Computational modeling;Data models;Multimodal video generation;text-audio to video;VQ-GAN;diffusion;deep learning},
-  doi={10.1109/TMM.2024.3362149}}
+  publisher={IEEE}
+}
 ```
